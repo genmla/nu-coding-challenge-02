@@ -1,0 +1,58 @@
+/*wirefram to be deleted*/
+header, aside, main, footer {
+    border: .25em gold;
+    background-color: lightblue;
+    margin: .5em;
+    padding: 1em;
+}
+
+:root {
+/*colors*/
+    --blue700:darkblue;
+    --gold500:gold;
+
+/*fonts*/
+    --Georgia: Georgia, 'Times New Roman', Times, serif;
+
+/*spacing*/
+
+}
+/*elements*/
+a {
+    color: rgb(22, 67, 12);
+    font-weight: 550;
+}
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+header, footer {
+    width: 100%
+}
+html {
+    background-color: var(--blue700);
+}
+
+
+/*classes*/
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+}
+.header-bar ul {
+   display: flex;
+}
+.flex-wrapper {
+    display: flex  ;
+    flex-direction: row;
+}
+.about-bar {
+    flex-direction: column;
+}
+
+@media screen and (max-width:768px){
+    .flex-wrapper {
+        flex-direction: column;
+    }
+    
+}
