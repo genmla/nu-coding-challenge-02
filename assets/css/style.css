@@ -1,26 +1,29 @@
 /*wirefram to be deleted*/
-header, aside, main, footer {
+header,
+aside,
+main,
+footer {
     border: .25em solid var(--links);
     background-color: var(--background-section);
-    margin: .5em;
-    padding: .5em;
+    margin: .25em;
+    padding: 0.5em 1em 0.5em 1em;
 }
 
 /*variables*/
 :root {
     /*page-wide*/
-    --background-html:darkblue;
-    --background-section:lightblue;
-    --borders:gold;
+    --background-html: darkblue;
+    --background-section: lightblue;
+    --borders: gold;
     --fontfamily: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --links:gold;
+    --links: gold;
 
     /*colors*/
-    --blue700:darkblue;
-    --gold500:gold;
+    --blue700: darkblue;
+    --gold500: gold;
 
     /*fonts*/
-    --Georgia: Georgia, 'Times New Roman', Times, serif; 
+    --Georgia: Georgia, 'Times New Roman', Times, serif;
     --Segoe: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     /*spacing*/
@@ -32,67 +35,111 @@ a {
     color: var(--links);
     font-weight: 550;
 }
+
+aside {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: .5em;
+    padding: .5em .25em 5em .25em;
+}
+
 body {
     display: flex;
     flex-wrap: wrap;
     height: 100vh;
 }
-header, footer {
+
+header,
+footer {
     width: 100%
 }
+
 html {
     background-color: var(--background-html);
     font-family: var(--fontfamily);
 }
+
 footer {
     text-align: center;
 }
 
+li {
+    display: flex;
+    font-size: 1.5em;
+    justify-content: space-between;
+    padding: .5em .5em 0 .5em;
+}
 
+p {
+    padding: .25em .5em .25em 1em;
+}
+
+ul {
+    display: flex;
+}
 
 /*classes*/
 .header-bar {
     display: flex;
     justify-content: space-between;
 }
-.header-bar ul {
-   display: flex;
-   flex-direction: row;
-}
 
 .flex-wrapper {
-    display: flex  ;
+    display: flex;
     flex-direction: row;
 }
+
 /*do we want to make the about bar centered vertically?*/
 .about-bar {
     flex-direction: column;
+    justify-content: center;
 }
 
-.about-bar img{
+.about-bar img {
     border-radius: 50%;
+    display: block;
+    padding: 0 0 1.5em 0;
+    width: 24em;
+}
+.about-bar p {
+    margin: auto;
+    padding: .5em 2em;
+    width: 24em;
+}
+
+.figure-contact {
+    display: flex;
+    list-style-type: none;
+}
+
+.figure-contact li {
+    font-size: 1em;
+}
+.figure-highlight {
+    width: 85%; 
+}
+
+.figure-highlight img{
+    border-radius: 10%;
     display: block;
     margin: auto;
     width: 24em;
-}
+}   
+
 .section-projects {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.project-1 {
-    width: 36em;
-}
-.project-1 img {
-    border-radius: 10%;
-    display: block;
-    margin: auto;
-    width: 36em;
-}
+
 .section-projects figure {
     width: 18em;
 }
+
 .section-projects img {
     border-radius: 10%;
     display: block;
@@ -110,9 +157,11 @@ footer {
     display: block;
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:768px) {
     .flex-wrapper {
         flex-direction: column;
     }
-    
+    .section-projects figure {
+        width: 24em;
+    }
 }
