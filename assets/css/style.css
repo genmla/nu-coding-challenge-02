@@ -1,19 +1,27 @@
 /*wirefram to be deleted*/
 header, aside, main, footer {
-    border: .25em solid gold;
-    background-color: lightblue;
+    border: .25em solid var(--links);
+    background-color: var(--background-section);
     margin: .5em;
     padding: .5em;
 }
 
 /*variables*/
 :root {
+    /*page-wide*/
+    --background-html:darkblue;
+    --background-section:lightblue;
+    --borders:gold;
+    --fontfamily: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --links:gold;
+
     /*colors*/
     --blue700:darkblue;
     --gold500:gold;
 
     /*fonts*/
-    --Georgia: Georgia, 'Times New Roman', Times, serif;
+    --Georgia: Georgia, 'Times New Roman', Times, serif; 
+    --Segoe: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     /*spacing*/
 
@@ -21,7 +29,7 @@ header, aside, main, footer {
 
 /*elements*/
 a {
-    color: var(--gold500);
+    color: var(--links);
     font-weight: 550;
 }
 body {
@@ -33,11 +41,13 @@ header, footer {
     width: 100%
 }
 html {
-    background-color: var(--blue700);
+    background-color: var(--background-html);
+    font-family: var(--fontfamily);
 }
 footer {
     text-align: center;
 }
+
 
 
 /*classes*/
@@ -47,7 +57,9 @@ footer {
 }
 .header-bar ul {
    display: flex;
+   flex-direction: row;
 }
+
 .flex-wrapper {
     display: flex  ;
     flex-direction: row;
@@ -69,16 +81,33 @@ footer {
     flex-wrap: wrap;
     justify-content: space-around;
 }
-
+.project-1 {
+    width: 36em;
+}
+.project-1 img {
+    border-radius: 10%;
+    display: block;
+    margin: auto;
+    width: 36em;
+}
 .section-projects figure {
     width: 18em;
 }
-
 .section-projects img {
     border-radius: 10%;
     display: block;
     margin: auto;
     width: 18em;
+}
+
+.section-contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.section-contact a {
+    display: block;
 }
 
 @media screen and (max-width:768px){
