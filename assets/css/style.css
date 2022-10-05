@@ -3,20 +3,22 @@ header,
 aside,
 main,
 footer {
-    border: .25em solid var(--links);
     background-color: var(--background-section);
-    margin: .25em;
-    padding: 0.5em 1em 0.5em 1em;
+    /* padding: 1.5em; */
 }
 
 /*variables*/
 :root {
     /*page-wide*/
-    --background-html: darkblue;
-    --background-section: lightblue;
-    --borders: gold;
+    --background-html: black;
+    --background-section: white;
+    --borderhighlight: .25em solid gold;
+    --borderfarhighlight: .25em solid rgb(132, 113, 3);
+    --bordershadow:.25em solid rgb(117, 114, 114);
+    --borderfarshadow:.25em solid rgb(64, 63, 63);
+    --fontcolor: rgb(41, 40, 40);
     --fontfamily: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --links: gold;
+    --links: rgb(116, 2, 21);
 
     /*colors*/
     --blue700: darkblue;
@@ -38,12 +40,16 @@ a {
 
 aside {
     align-items: center;
+    border-bottom: var(--borderfarhighlight);
+    border-right: var(--borderhighlight);
+    border-top: var(--borderfarhighlight);
+    border-left: var(--bordershadow);
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     flex-wrap: wrap;
     justify-content: center;
-    margin: .5em;
-    padding: .5em .25em 5em .25em;
+    margin: 0 0 0 .5em;
+    /*padding: .5em .25em 5em .25em; */
 }
 
 body {
@@ -52,116 +58,144 @@ body {
     height: 100vh;
 }
 
+header, aside, main, footer {
+    background-color: var(--background-section);
+}
 header,
 footer {
-    width: 100%
+    padding: 1.5em;
+    width: 100%;
 }
-
+header {
+    border-bottom: var(--borderhighlight);
+    border-left: var(--bordershadow);
+    border-right: var(--bordershadow);
+    border-top: var(--borderhighlight);
+    display: flex;
+    justify-content: space-between;
+    margin: .5em .5em 0 .5em; 
+}
 html {
     background-color: var(--background-html);
     font-family: var(--fontfamily);
 }
-
 footer {
+    border-bottom: var(--borderfarshadow);
+    border-left: var(--bordershadow);
+    border-right: var(--bordershadow);
+    border-top: var(--borderhighlight);
+    margin: 0 .5em .5em .5em;
     text-align: center;
 }
-
 li {
     display: flex;
     font-size: 1.5em;
     justify-content: space-between;
     padding: .5em .5em 0 .5em;
 }
-
+main {
+    border-bottom: var(--borderfarhighlight);
+    border-right: var(--bordershadow);
+    border-top: var(--borderfarhighlight);
+    border-left: var(--borderhighlight);
+    margin: 0 .5em 0 0;
+}
 p {
     padding: .25em .5em .25em 1em;
 }
-
 ul {
     display: flex;
 }
 
 /*classes*/
-.header-bar {
-    display: flex;
-    justify-content: space-between;
-}
-
-.flex-wrapper {
+.flex-row {
     display: flex;
     flex-direction: row;
+    /* flex-wrap: wrap; */
 }
-
-/*do we want to make the about bar centered vertically?*/
 .about-bar {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-}
-
-.about-bar img {
-    border-radius: 50%;
-    display: block;
-    padding: 0 0 1.5em 0;
-    width: 24em;
+    align-items: center;
 }
 .about-bar p {
     margin: auto;
     padding: .5em 2em;
-    width: 24em;
 }
-
-.figure-contact {
-    display: flex;
-    list-style-type: none;
-}
-
-.figure-contact li {
-    font-size: 1em;
-}
-.figure-highlight {
-    width: 85%; 
-}
-
-.figure-highlight img{
+.about-bar img {
     border-radius: 10%;
-    display: block;
-    margin: auto;
-    width: 24em;
-}   
-
+    padding: 0 0 1.5em 0;
+    width: 18em;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 .section-projects {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    justify-content: space-evenly;
+    align-items: center;
 }
-
-.section-projects figure {
-    width: 18em;
+.figure-project1 {
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
-
-.section-projects img {
+.figure-project1 h3 {
+    background-color: lightblue;  
+    border-bottom: .25em solid gold;
+    border-right: .25em solid gold;
+    border-top: .25em solid gold;
+}
+.figure-project1 img{
+    border: .25em solid gold;
     border-radius: 10%;
     display: block;
     margin: auto;
+    width: 36em;
+}   
+.figure-projects {
     width: 18em;
+    padding: 0;
+    margin: 0;
 }
-
+.figure-projects img {
+    border-radius: 10%;
+    display: block;
+    margin: auto;
+    width: 100%;
+}
 .section-contact {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-
 .section-contact a {
     display: block;
 }
-
+.figure-contact {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+.figure-contact li {
+    
+    font-size: 1em;
+}
 @media screen and (max-width:768px) {
-    .flex-wrapper {
+    .flex-row {
         flex-direction: column;
     }
     .section-projects figure {
         width: 24em;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
     }
 }
