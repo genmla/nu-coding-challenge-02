@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>CSS Box Styling</title>
+  <title>Genevieve Mladenka</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header class="header-bar">
+  <header>
     <h1>Genevieve Mladenka</h1>
     <nav>
       <ul>
@@ -21,81 +21,94 @@
       </ul>
     </nav>
   </header>
-  <section class="flex-wrapper">
-    <aside>
-      <h2 id="about">About</h2>
+  <!-- <aside>
       <section class="about-bar">
+        <h2 id="about">About</h2>
         <p>
           <img src="../nu-coding-challenge-02/assets/images/About.jpg" alt="Genevieve, gesturing at fall foiliage">
-          Genevieve is odd. Outside of that oddity, she likes autumn foiliage, goes camping, plays folk music, and
-          often practices what one
-          might seldomly call the "fine arts."
+          Genevieve likes autumn foiliage, goes camping, plays folk music, and
+          often practices what others seldomly call the "fine arts."
         </p>
       </section>
-      <h2 id="contact">Contact</h2>
-      <section>
-        <ul class="figure-contact">
-          <li><a href="mailto:gmmladenka@gmail.com">Gmail </a> | </li>
-          <li><a href="https://github.com/genmla">GitHub </a> | </li>
-          <li>Phone: (###)###-####</li>
-        </ul>
+    </aside> -->
+  <main>
+    <section class="flex-column">
+      <section class="flex-row">
+        <h2 id="about">About</h2>
+        <section class="about-bar">
+          <img src="../nu-coding-challenge-02/assets/images/About.jpg" alt="Genevieve, gesturing at fall foiliage">
+          <p>
+              Genevieve likes autumn foiliage, goes camping, plays folk music, and
+            often practices what others seldomly call the "fine arts."
+          </p>
+        </section>
       </section>
-    </aside>
-    <main>
-      <h2 id="summary">Summary</h2>
-      <section>
-        <p>
-          I'm not very good at this. I have experience in communications in higher education. I have learned some
-          basic
-          html, and I am currently learning web development skill to further my knowledge. The examples of projects on
-          this site are in progress.
-        </p>
+      <section class="flex-row">
+        <h2>Summary</h2>
+        <section id="summary">
+
+          <p>
+            I have a Bachelor's in English Literature from the Univeristy of Texas at Austin and a Master's in the
+            Humanities from the Univeristy of Chicago. People have asked over and over again what I am going to do with
+            either of those degrees, and man it would be so sweet to tell them I am coding.
+          </p>
+          <p>
+            I handle communications to prospective students in my current role at Northwestern University School of
+            Professional Studies, where I gained my experience in HTML. I have strong written and verbal communication
+            skills, which I beleive will pair with the web development skills I am learning in this bootcamp.
+          </p>
+        </section>
       </section>
-      <h2 id="projects">Projects</h2>
-        <figure class="figure-highlight">
-          <h3>Horiseon</h3>
-          <a href="https://genmla.github.io/NU-Coding-Challenge-01/">
-            <img src="../nu-coding-challenge-02/assets/images/Project1.jpg"
-              alt="Screenshot of Project One, Horiseon website, depicting 4 people in meeting and SEO terms">
-          </a>
-          <p>
-            Link: <a href="https://genmla.github.io/NU-Coding-Challenge-01/">Project 1</a>
-          </p>
-          <p>
-            The aim of this project was to improve the accessiblity of the webpage. We ensured the page had semantic
-            html elements, alt text, and working links. We also refactored the code to reduce redundancy.
-          </p>
-        </figure>
-        <section class="section-projects">
-        <figure>
-          <h3>Project 2</h3>
-          <img src="../nu-coding-challenge-02/assets/images/Wow.jpg"
-            alt="Screenshot Project Wow portraying poorly written words: WOW! in the forefront and Really Neat! in the background"
-            href="https://genmla.github.io/NU-Coding-Challenge-01/">
-          <p>
-            Link: <a href="https://genmla.github.io/NU-Coding-Challenge-01/">Project Wow</a>
-          </p>
-          <p>
-            Wow this project is really neat. Whoever made this definitely has an eye for color and is very employable. And her handwriting is super good. 
-          </p>
-        </figure>
-        <figure>
-          <h3>Project 3</h3>
-          <img src="../nu-coding-challenge-02/assets/images/OKExcellent.jpg"
-            alt="Screenshot of Project OK Excellet portraying the workds OK Excellent over busy background"
-            href="https://genmla.github.io/NU-Coding-Challenge-01/">
-          <p>
-            Link: <a href="https://genmla.github.io/NU-Coding-Challenge-01/">Project 1</a>
-          </p>
-          <p>
-            OK, this project is excellent. How can we say anything more? 
-          </p>
-        </figure>
+      <section class="felx-row">
+        <h2>Projects</h2>
+        <section class="section-projects" id="projects">
+
+          <figure class="figure-project1">
+
+            <a href="https://genmla.github.io/NU-Coding-Challenge-01/">
+              <img src="../nu-coding-challenge-02/assets/images/Project1.jpg"
+                alt="Screenshot of Project One, Horiseon website, depicting 4 people in meeting and SEO terms">
+            </a>
+          </figure>
+          <figure class="figure-projects">
+
+            <a href="https://genmla.github.io/NU-Coding-Challenge-01/"><img
+                src="../nu-coding-challenge-02/assets/images/Wow-thumb.jpg"
+                alt="Screenshot Project Wow portraying poorly written words: WOW! in the forefront and Really Neat! in the background">
+            </a>
+          </figure>
+          <figure class="figure-projects">
+
+            <a href="https://genmla.github.io/NU-Coding-Challenge-01/"><img
+                src="../nu-coding-challenge-02/assets/images/OKExcellent-thumb.jpg"
+                alt="Screenshot of Project OK Excellet portraying the workds OK Excellent over busy background">
+            </a>
+          </figure>
+          <figure class="figure-projects">
+
+            <a href="https://genmla.github.io/NU-Coding-Challenge-01/"><img
+                src="../nu-coding-challenge-02/assets/images/Wow-thumb.jpg"
+                alt="Screenshot Project Wow portraying poorly written words: WOW! in the forefront and Really Neat! in the background">
+            </a>
+          </figure>
+        </section>
       </section>
-    </main>
+      <section class="flex-row">
+        <h2 id="contact">Contact</h2>
+        <section>
+          <ul class="figure-contact">
+            <li><a href="mailto:gmmladenka@gmail.com">Gmail </a></li>
+            <li><a href="https://github.com/genmla">GitHub </a></li>
+            <li><a href="https://twitter.com/">Twitter </a></li>
+            <li>Phone: (###)###-####</li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </main>
   </section>
   <footer>
-    <p>Made With Any Luck &copy;2022</p>
+    <h3>Made With Any Luck &copy;2022</h3>
   </footer>
 </body>
 
