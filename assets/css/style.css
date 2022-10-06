@@ -1,55 +1,24 @@
-/*wirefram to be deleted*/
-header,
-aside,
-main,
-footer {
-    background-color: var(--background-section);
-    /* padding: 1.5em; */
-}
-
 /*variables*/
 :root {
-    /*page-wide*/
     --background-html: black;
+    --background-header: rgb(132, 113, 3);
     --background-section: white;
     --borderhighlight: .25em solid gold;
     --borderfarhighlight: .25em solid rgb(132, 113, 3);
-    --bordershadow:.25em solid rgb(117, 114, 114);
-    --borderfarshadow:.25em solid rgb(64, 63, 63);
+    --bordershadow: .25em solid rgb(117, 114, 114);
+    --borderfarshadow: .25em solid rgb(64, 63, 63);
     --fontcolor: rgb(41, 40, 40);
+    --color-head-foot: gold; 
     --fontfamily: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --links: rgb(116, 2, 21);
-
-    /*colors*/
-    --blue700: darkblue;
-    --gold500: gold;
-
-    /*fonts*/
-    --Georgia: Georgia, 'Times New Roman', Times, serif;
-    --Segoe: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-    /*spacing*/
-
+    --font-large: 2em;
+    --font-x-large: 3em;
+    --links: gold;
 }
 
 /*elements*/
-a {
-    color: var(--links);
-    font-weight: 550;
-}
-
-aside {
-    align-items: center;
-    border-bottom: var(--borderfarhighlight);
-    border-right: var(--borderhighlight);
-    border-top: var(--borderfarhighlight);
-    border-left: var(--bordershadow);
-    display: flex;
-    flex-direction: column; 
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 0 0 .5em;
-    /*padding: .5em .25em 5em .25em; */
+html {
+    background-color: var(--background-html);
+    font-family: var(--fontfamily);
 }
 
 body {
@@ -58,27 +27,91 @@ body {
     height: 100vh;
 }
 
-header, aside, main, footer {
-    background-color: var(--background-section);
-}
 header,
 footer {
-    padding: 1.5em;
+    background-color: var(--background-header);
+}
+
+header,
+footer {
+    padding: .5em;
     width: 100%;
 }
+
 header {
+    align-items: center;
     border-bottom: var(--borderhighlight);
     border-left: var(--bordershadow);
     border-right: var(--bordershadow);
-    border-top: var(--borderhighlight);
+    border-top: var(--borderfarshadow);
     display: flex;
     justify-content: space-between;
-    margin: .5em .5em 0 .5em; 
+    margin: .5em .5em 0 .5em;
 }
-html {
-    background-color: var(--background-html);
-    font-family: var(--fontfamily);
+
+h1 {
+    color: var(--color-head-foot);
+    margin: 0;
+    width: 28%;
 }
+
+ul {
+    display: flex;
+    padding: .5em;
+}
+
+li {
+    display: flex;
+    font-size: 1.5em;
+    justify-content: space-between;
+    padding: .5em;
+}
+
+a {
+    color: var(--links);
+    font-weight: 650;
+}
+
+main {
+    background-color: var(--background-section);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 .5em 0 .5em;
+    padding: 1.5em;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+h2 {
+    font-size: var(--font-large);
+    font-weight: 650px;
+    text-align: right;
+    width: 15%;
+}
+
+card {
+    align-items: center;
+    border-left: var(--borderhighlight);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin: .5em 1em .5em 0;
+    padding: 1.5em;
+    width: 65%;
+}
+
+p {
+    margin: .5em 2em;
+    width: 45%;
+}
+
 footer {
     border-bottom: var(--borderfarshadow);
     border-left: var(--bordershadow);
@@ -87,115 +120,104 @@ footer {
     margin: 0 .5em .5em .5em;
     text-align: center;
 }
-li {
-    display: flex;
-    font-size: 1.5em;
-    justify-content: space-between;
-    padding: .5em .5em 0 .5em;
-}
-main {
-    border-bottom: var(--borderfarhighlight);
-    border-right: var(--bordershadow);
-    border-top: var(--borderfarhighlight);
-    border-left: var(--borderhighlight);
-    margin: 0 .5em 0 0;
-}
-p {
-    padding: .25em .5em .25em 1em;
-}
-ul {
-    display: flex;
-}
 
 /*classes*/
-.flex-row {
-    display: flex;
-    flex-direction: row;
-    /* flex-wrap: wrap; */
+
+#about img {
+    border-radius: 25%;
+    height: max-content;
+    width: 45%
 }
-.about-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+
+#projects img {
+    border-radius: 15%;
+    margin: 0.5em;
 }
-.about-bar p {
-    margin: auto;
-    padding: .5em 2em;
+
+.project1 {
+    width: 45%;
 }
-.about-bar img {
-    border-radius: 10%;
-    padding: 0 0 1.5em 0;
-    width: 18em;
+
+.projects {
+    width: 12em
 }
-.flex-column {
+
+#contact a {
+    display: block;
+}
+
+#contact p {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: wrnowr
 }
-.section-projects {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.figure-project1 {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-.figure-project1 h3 {
-    background-color: lightblue;  
-    border-bottom: .25em solid gold;
-    border-right: .25em solid gold;
-    border-top: .25em solid gold;
-}
-.figure-project1 img{
-    border: .25em solid gold;
-    border-radius: 10%;
-    display: block;
-    margin: auto;
-    width: 36em;
-}   
-.figure-projects {
-    width: 18em;
-    padding: 0;
-    margin: 0;
-}
-.figure-projects img {
-    border-radius: 10%;
-    display: block;
-    margin: auto;
-    width: 100%;
-}
-.section-contact {
+
+#contact ul {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-}
-.section-contact a {
-    display: block;
-}
-.figure-contact {
-    display: flex;
     list-style-type: none;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    /* width: 12em; */
 }
-.figure-contact li {
-    
+
+#contact li {
     font-size: 1em;
 }
-@media screen and (max-width:768px) {
-    .flex-row {
-        flex-direction: column;
+
+h3 {
+    color: var(--color-head-foot);
+}
+
+@media screen and (max-width:1080px) {
+    h2 {
+        text-align: center;
+        width: 70%;
     }
-    .section-projects figure {
-        width: 24em;
+
+    card {
+        border-top: var(--borderhighlight);
+        border-left: none;
+        margin: auto;
     }
-    ul {
-        display: flex;
-        flex-direction: column;
+    
+    p {
+        text-align:left;
+
+    }
+
+    @media screen and (max-width:1065px) {
+        #about img {
+            margin: auto;
+            width: 85%
+        }
+
+        p {
+            padding: 1em;
+            margin: auto;
+            width: 85%;
+        }
+
+        @media screen and (max-width:768px) {
+
+            ul {
+                display: flex;
+                flex-direction: column;
+            }
+
+            card {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 70%
+            }
+
+            .project1 {
+                width: 85%;
+            }
+
+            .projects {
+                width: 65%;
+            }
+        }
     }
 }
