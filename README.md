@@ -15,7 +15,7 @@ This site can be used as a beginning portfolio for a student to showcase their w
  
 ![demo of the deployed portfolio, demonstrating how the site responds to user interaction with links, images, and screen resizing](/assets/images/Genevieve%20Mladenka.gif)
 
-URL:
+URL: https://genmla.github.io/nu-coding-challenge-02/
 
 ## Credits
 
