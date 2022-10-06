@@ -8,11 +8,14 @@
     --bordershadow: .25em solid rgb(117, 114, 114);
     --borderfarshadow: .25em solid rgb(64, 63, 63);
     --fontcolor: rgb(41, 40, 40);
-    --color-head-foot: gold; 
+    --color-head-foot: gold;
     --fontfamily: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --font-large: 2em;
     --font-x-large: 3em;
-    --links: gold;
+    --links-header: gold;
+    --links-header-hover: rgb(251, 255, 0);
+    --links-body: rgb(132, 113, 3);
+    --links-body-hover: gold;
 }
 
 /*elements*/
@@ -67,8 +70,8 @@ li {
     padding: .5em;
 }
 
-a {
-    color: var(--links);
+header a {
+    color: var(--links-header);
     font-weight: 650;
 }
 
@@ -107,6 +110,11 @@ card {
     width: 65%;
 }
 
+card a {
+    color: var(--links-body);
+    font-weight: 650;
+}
+
 p {
     margin: .5em 2em;
     width: 45%;
@@ -121,7 +129,12 @@ footer {
     text-align: center;
 }
 
-/*classes*/
+
+h3 {
+    color: var(--color-head-foot);
+}
+
+/*classes and ids*/
 
 #about img {
     border-radius: 25%;
@@ -157,15 +170,58 @@ footer {
     flex-direction: row;
     list-style-type: none;
     justify-content: space-between;
-    /* width: 12em; */
 }
 
 #contact li {
     font-size: 1em;
 }
 
-h3 {
+/*pseduo classes and elements*/
+a:hover {
+    font-size: 110%;
+}
+
+card a:hover {
+    color: var(--links-body-hover);
+}
+
+header a:hover {
+    color: var(--links-header-hover);
+}
+
+.project1-img {
     color: var(--color-head-foot);
+    cursor: pointer;
+    position: relative;
+}
+
+.project1-img:hover::after {
+    background-color: var(--background-header);
+    bottom: 0;
+    content: attr(data-text);
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+}
+
+.projects-img {
+    color: var(--color-head-foot);
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+
+.projects-img:hover::after {
+    background-color: var(--background-header);
+    bottom: 0;
+    content: attr(data-text);
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
 }
 
 @media screen and (max-width:1080px) {
@@ -179,9 +235,9 @@ h3 {
         border-left: none;
         margin: auto;
     }
-    
+
     p {
-        text-align:left;
+        text-align: left;
 
     }
 
